@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_library(perfetto STATIC ./sdk/perfetto.cc)
 
-target_include_directories(perfetto PUBLIC ./sdk)
+target_include_directories(perfetto PUBLIC ${CMAKE_SOURCE_DIR}/sdk)
 
 target_link_libraries(perfetto PUBLIC ${CMAKE_THREAD_LIBS_INIT})
 
